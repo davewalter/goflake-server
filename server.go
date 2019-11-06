@@ -27,7 +27,7 @@ func Id(w http.ResponseWriter, r *http.Request) {
 
 	values := r.URL.Query()
 	countVar := values["count"]
-	var count = 1
+	var count = 2
 	if len(countVar) == 1 {
 		count, _ = strconv.Atoi(countVar[0])
 	}
