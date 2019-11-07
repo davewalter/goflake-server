@@ -49,7 +49,7 @@ func Id(w http.ResponseWriter, r *http.Request) {
 func Health(w http.ResponseWriter, r *http.Request) {
 	duration := time.Since(started)
 
-	if duration.Seconds() > 10 {
+	if duration.Seconds() > 30 {
 		w.WriteHeader(500)
 		w.Write([]byte(fmt.Sprintf("error: %v", duration.Seconds())))
 	} else {
